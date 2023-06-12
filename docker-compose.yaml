@@ -1,0 +1,7 @@
+services:
+  first-compose:
+    build: .
+    ports:
+      - "8000:8080"
+    volumes:
+      - .:/code
