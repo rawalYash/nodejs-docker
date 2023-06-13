@@ -1,7 +1,9 @@
+version: '3.4'
 services:
-  first-compose:
-    build: .
-    ports:
-      - "8000:8080"
-    volumes:
-      - .:/code
+  firstDocker:
+     image: first-docker
+     build:
+      context: .
+      dockerfile: ./Dockerfile
+     ports:
+       - 8080:8080
