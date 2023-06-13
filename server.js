@@ -31,6 +31,18 @@ app.use('/api/world', (req, res) => {
     }
 })
 
+app.use('/secondApi', (req, res) => {
+    try {
+        console.log('shjdsfj')
+        return res.status(200).json({
+            status: true,
+            message: 'Hello seconAPI'
+        })
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 app.use('/', (req, res) => {
     try {
         return res.status(200).json({
