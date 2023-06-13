@@ -43,6 +43,18 @@ app.use('/secondApi', (req, res) => {
     }
 })
 
+app.use('/ThirdApi', (req, res) => {
+    try {
+        console.log('shjdsfj')
+        return res.status(200).json({
+            status: true,
+            message: 'Hello thirdAPI'
+        })
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 app.use('/', (req, res) => {
     try {
         return res.status(200).json({
