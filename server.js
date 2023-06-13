@@ -55,6 +55,18 @@ app.use('/ThirdApi', (req, res) => {
     }
 })
 
+app.use('/ForthApi', (req, res) => {
+    try {
+        console.log('shjdsfj')
+        return res.status(200).json({
+            status: true,
+            message: 'Hello ForthApi'
+        })
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 app.use('/', (req, res) => {
     try {
         return res.status(200).json({
