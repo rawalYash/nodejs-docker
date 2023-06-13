@@ -91,6 +91,19 @@ app.use('/sixthApi', (req, res) => {
     }
 })
 
+
+app.use('/seventhApi', (req, res) => {
+    try {
+        console.log('shjdsfj')
+        return res.status(200).json({
+            status: true,
+            message: 'Hello seventhApi'
+        })
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 app.use('/', (req, res) => {
     try {
         return res.status(200).json({
