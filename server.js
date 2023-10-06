@@ -30,6 +30,17 @@ app.use('/hello-people', (req, res) => {
     }
 })
 
+app.use('/hello-guys', (req, res) => {
+    try {
+        return res.status(200).json({
+            status: true,
+            message: 'Hello guys'
+        })
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 app.use('/api/world', (req, res) => {
     try {
         console.log('shjdsfj')
