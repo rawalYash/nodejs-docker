@@ -11,7 +11,7 @@ pipeline {
           stage("pull from github"){
             steps {
                 echo "Pulling code"
-                sh "sudo git pull"
+                sh "sudo git pull origin main"
             }
         }
         stage("Build"){
