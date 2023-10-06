@@ -14,12 +14,12 @@ pipeline {
                 sh "sudo git pull origin main"
             }
         }
-         stage("killinh docker container"){
-            steps {
-                echo "Pulling code"
-                sh "sudo docker-compose down"
-            }
-        }
+        //  stage("killinh docker container"){
+        //     steps {
+        //         echo "Pulling code"
+        //         sh "sudo docker-compose down"
+        //     }
+        // }
         stage("Build"){
             steps {
                 echo "Building the image"
@@ -39,7 +39,7 @@ pipeline {
         stage("prune docker conatiner cache"){
             steps {
                 echo "removing all cache"
-                sh "sudo docker system prune -f --all"
+                sh "sudo docker system prune -f"
                 
             }
         }
