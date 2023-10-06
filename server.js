@@ -30,7 +30,7 @@ app.use('/hello-people', (req, res) => {
     }
 })
 
-app.use('/hello-guys', (req, res) => {
+app.use('/hello-guyss', (req, res) => {
     try {
         return res.status(200).json({
             status: true,
