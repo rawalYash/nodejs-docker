@@ -14,6 +14,12 @@ pipeline {
                 sh "sudo git pull origin main"
             }
         }
+         stage("pull from github"){
+            steps {
+                echo "Pulling code"
+                sh "sudo docker-compose down"
+            }
+        }
         stage("Build"){
             steps {
                 echo "Building the image"
