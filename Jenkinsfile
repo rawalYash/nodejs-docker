@@ -14,7 +14,7 @@ pipeline {
                 sh "sudo git pull origin main"
             }
         }
-         stage("pull from github"){
+         stage("killinh docker container"){
             steps {
                 echo "Pulling code"
                 sh "sudo docker-compose down"
